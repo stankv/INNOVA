@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}"ИННОВА" - Сведения об образовательной организации{% endblock %}
+
+{% block body %}<body>{% endblock %}
+
+{% block classheader %}class="skel-layers-fixed"{% endblock %}
+
+{% block content %}
+<section id="main" class="wrapper style1">
+    <header class="major">
+        <h2>Сведения об образовательной организации</h2>
+    </header>
+    <div class="container">
+        <section id="content">
+            <ul>
+                <li><a href="{% url 'edu' page='about' page2='about-main' %}">Основные сведения </a></li>
+                <li><a href="{% url 'edu' page='about' page2='about-structure' %}">Структура и органы управления образовательной организацией</a></li>
+                <li><a href="{% url 'edu' page='about' page2='about-documents' %}">Документы</a></li>
+                <li><a href="{% url 'edu' page='about' page2='about-education' %}">Образование</a></li>
+                <li><a href="{% url 'edu' page='about' page2='about-management' %}">Руководство. Педагогический (научно-педагогический) состав</a></li>
+                <li><a href="{% url 'edu' page='about' page2='about-equipment' %}">Материально-техническое обеспечение и оснащенность образовательного процесса. Доступная среда</a></li>
+                <li><a href="{% url 'edu' page='about' page2='about-paid-education' %}">Платные образовательные услуги</a></li>
+                <li><a href="{% url 'edu' page='about' page2='about-finance' %}">Финансово-хозяйственная деятельность</a></li>
+                <li><a href="{% url 'edu' page='about' page2='about-places' %}">Вакантные места для приема (перевода) обучающихся</a></li>
+                <li><a href="{% url 'edu' page='about' page2='about-grants' %}">Стипендии и меры поддержки обучающихся </a></li>
+                <li><a href="{% url 'edu' page='about' page2='about-international-cooperation' %}">Международное сотрудничество</a></li>
+                <li><a href="{% url 'edu' page='about' page2='about-catering' %}">Организация питания в образовательной организации</a></li>
+							</ul>
+        </section>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}"ИННОВА" - Дополнительное образование{% endblock %}
+
+{% block body %}<body>{% endblock %}
+
+{% block classheader %}class="skel-layers-fixed"{% endblock %}
+
+{% block content %}
+<section id="main" class="wrapper style1">
+    <header class="major">
+        <h2>Программы дополнительного профессионального образования</h2>
+    </header>
+    <div class="container">
+        <section id="content">
+            <section>
+                <div>
+                    <!-- PP1 -->
+                    <p><span class="image left"><a href="do-1.html"><img src="{% static 'images/pic08.jpg' %}" alt="" /></a></span></p>
+                    <h5>Дополнительное профессиональное образование "Обучение работников оказанию первой помощи пострадавшим"</h5>
+                    <p>Длительность: 18 академических часа </br>
+                        Форма обучения: очная-заочная</br>
+                        Стоимость: 8 000 руб.</br>
+                        <a href="do-1.html">Подробнее...</a></p>
+                    <div style="clear: both"></div>
+                    <hr />
+                </div>
+            </section>
+        </section>
+    </div>
+</section>
+{% endblock %}

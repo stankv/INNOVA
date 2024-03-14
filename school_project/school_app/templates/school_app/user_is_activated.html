@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Пользователь уже активирован{% endblock %}
+
+{% block body %}<body>{% endblock %}
+
+{% block classheader %}class="skel-layers-fixed"{% endblock %}
+
+{% block content %}
+<section id="main" class="wrapper style1">
+    <header class="major">
+        <h2>Активация</h2>
+    </header>
+    <div class="container">
+        <section id="content">
+            <p>Пользователь с таким логином был активирован ранее.</p>
+            <p><a href="{% url 'login' %}">Войти в личный кабинет</a></p>
+        </section>
+    </div>
+</section>
+{% endblock %}

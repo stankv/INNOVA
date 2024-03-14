@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Изменение личных данных{% endblock %}
+
+{% block body %}<body>{% endblock %}
+
+{% block classheader %}class="skel-layers-fixed"{% endblock %}
+
+{% block content %}
+<section id="main" class="wrapper style1">
+    <header class="major">
+        <h2>Изменение личных данных пользователя {{ user.username }}</h2>
+    </header>
+    <div class="container">
+        <section id="content">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Сохранить">
+            </form>
+        </section>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}"ИННОВА" - Контакты{% endblock %}
+
+{% block body %}<body>{% endblock %}
+
+{% block classheader %}class="skel-layers-fixed"{% endblock %}
+
+{% block content %}
+<section id="main" class="wrapper style1">
+    <header class="major">
+        <h2>Контакты</h2>
+    </header>
+    <div class="container">
+        <section id="content">
+            <section>
+                <h3>Напишите нам</h3>
+                <div class="row">
+                    <div class="6u 12u(2)">
+                        <h4>Email офиса:</h4>
+                        <p>info@school-innova.ru</p>
+                        <h4>Email техподдержки:</h4>
+                        <p>support@school-innova.ru</p>
+                    </div>
+                    <div class="6u 12u(2)">
+                        <form method="post" action="#">
+                            <div class="row uniform">
+                                <div class="6u 12u(3)">
+                                    <input type="text" name="name" id="name" value="" placeholder="ФИО" />
+                                </div>
+                                <div class="6u 12u(3)">
+                                    <input type="email" name="email" id="email" value="" placeholder="Email" />
+                                </div>
+                            </div>
+                            <div class="row uniform">
+                                <div class="12u">
+                                    <textarea name="message" id="message" placeholder="Введите ваше сообщение" rows="6"></textarea>
+                                </div>
+                            </div>
+                            <div class="row uniform">
+                                <div class="12u">
+                                    <ul class="actions">
+                                        <li><input type="submit" value="Отправить сообщение" /></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+</section>
+{% endblock %}

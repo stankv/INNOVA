@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}"ИННОВА" - Повышение квалификации{% endblock %}
+
+{% block body %}<body>{% endblock %}
+
+{% block classheader %}class="skel-layers-fixed"{% endblock %}
+
+{% block content %}
+<section id="main" class="wrapper style1">
+    <header class="major">
+        <h2>Программы повышения квалификацииции</h2>
+    </header>
+    <div class="container">
+        <section id="content">
+            <section>
+                <a name="smp"></a>
+                <h3>Средний медицинский персонал</h3>
+                <div>
+                    <!-- PP1 -->
+                    <p><span class="image left"><a href="pk-1.html"><img src="{% static 'images/pic08.jpg' %}" alt="" /></a></span></p>
+                    <h5>Дополнительная профессиональная программа повышения квалификации медицинских сестер по специальности «Cестринское дело в косметологии»</h5>
+                    <p>Длительность: 144 академических часа </br>
+                        Форма обучения: очная</br>
+                        Стоимость: 20 000 руб.</br>
+                        <a href="pk-1.html">Подробнее...</a></p>
+                    <div style="clear: both"></div>
+                    <hr />
+                        <!-- PP2 -->
+                        <p><span class="image left"><a href="pk-2.html"><img src="{% static 'images/pic08.jpg' %}" alt="" /></a></span></p>
+                        <h5>Дополнительная профессиональная программа повышения квалификации медицинских сестер по специальности «Сестринская социальная помощь»</h5>
+                        <p>Длительность: 144 академических часа </br>
+                            Форма обучения: очная-заочная</br>
+                            Стоимость: 15 000 руб.</br>
+                            <a href="pk-2.html">Подробнее...</a></p>
+                    <div style="clear: both"></div>
+                    <hr />
+                </div>
+            </section>
+            <section>
+                <a name="doctor"></a>
+                <h3>Врачи</h3>
+                <div>
+                    <!-- PP1 -->
+                    <p><span class="image left"><a href="pk-3.html"><img src="{% static 'images/pic09.jpg' %}" alt="" /></a></span></p>
+                    <h5>Дополнительная профессиональная программа повышения квалификации врачей по специальности «Неврология»</h5>
+                    <p>Длительность: 144 академических часа </br>
+                        Форма обучения: очная</br>
+                        Стоимость: 25 000 руб.</br>
+                        <a href="pk-3.html">Подробнее...</a></p>
+                    <div style="clear: both"></div>
+                    <hr />
+                    <!-- PP2 -->
+                    <p><span class="image left"><a href="pk-4.html"><img src="{% static 'images/pic09.jpg' %}g" alt="" /></a></span></p>
+                    <h5>Дополнительная профессиональная программа повышения квалификации врачей по специальности «Косметология»</h5>
+                    <p>Длительность: 144 академических часа </br>
+                        Форма обучения: очная-заочная</br>
+                        Стоимость: 20 000 руб.</br>
+                        <a href="pk-4.html">Подробнее...</a></p>
+                    <div style="clear: both"></div>
+                    <hr />
+                </div>
+            </section>
+        </section>
+    </div>
+</section>
+{% endblock %}

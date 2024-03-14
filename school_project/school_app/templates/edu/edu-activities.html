@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}"ИННОВА" - Мероприятия{% endblock %}
+
+{% block body %}<body>{% endblock %}
+
+{% block classheader %}class="skel-layers-fixed"{% endblock %}
+
+{% block content %}
+<section id="main" class="wrapper style1">
+    <header class="major">
+        <h2>События и мероприятия</h2>
+    </header>
+    <div class="container">
+        <section id="content">
+            <section>
+                <div>
+                    <!-- PP1 -->
+                    <p><span class="image left"><a href="act-1.html"><img src="{% static 'images/pic08.jpg' %}" alt="" /></a></span></p>
+                    <h5>Предстоящее мероприятие</h5>
+                    <p>Длительность: 6 академических часа </br>
+                        Форма обучения: очная-заочная</br>
+                        Стоимость: 9 000 руб.</br>
+                        <a href="act-1.html">Подробнее...</a></p>
+                    <div style="clear: both"></div>
+                    <hr />
+                </div>
+            </section>
+        </section>
+    </div>
+</section>
+{% endblock %}

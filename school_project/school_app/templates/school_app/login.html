@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Вход{% endblock %}
+
+{% block body %}<body>{% endblock %}
+
+{% block classheader %}class="skel-layers-fixed"{% endblock %}
+
+{% block content %}
+<section id="main" class="wrapper style1">
+    <header class="major">
+        <h2>Вход в личный кабинет</h2>
+    </header>
+    <div class="container">
+        <section id="content">
+            {% if user.is_authenticated %}
+                <p>Вы уже выполнили вход.</p>
+            {% else %}
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="hidden" name="next" value="{{ next }}">
+                    <input type="submit" value="Войти">
+                </form>
+               <p><a href="{% url 'register' %}">Регистрация</a></p>
+            {% endif %}
+        </section>
+    </div>
+</section>
+{% endblock %}

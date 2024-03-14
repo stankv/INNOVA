@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}"ИННОВА" - Переподготовка{% endblock %}
+
+{% block body %}<body>{% endblock %}
+
+{% block classheader %}class="skel-layers-fixed"{% endblock %}
+
+{% block content %}
+<section id="main" class="wrapper style1">
+    <header class="major">
+        <h2>Программы профессиональной переподготовки</h2>
+    </header>
+    <div class="container">
+        <section id="content">
+            <section>
+                <a name="smp"></a>
+                <h3>Средний медицинский персонал</h3>
+                <div>
+                    <!-- PP1 -->
+                    <p><span class="image left"><a href="pp-1.html"><img src="{% static 'images/pic08.jpg' %}" alt="" /></a></span></p>
+                    <h5>Дополнительная программа профессиональной переподготовки медицинских сестер по специальности «Cестринское дело в косметологии»</h5>
+                    <p>Длительность: 288 академических часа </br>
+                        Форма обучения: очная</br>
+                        Стоимость: 184 000 руб.</br>
+                        <a href="pp-1.html">Подробнее...</a></p>
+                    <div style="clear: both"></div>
+                    <hr />
+                    <!-- PP2 -->
+                    <p><span class="image left"><a href="pp-2.html"><img src="{% static 'images/pic08.jpg' %}" alt="" /></a></span></p>
+                    <h5>Дополнительная программа профессиональной переподготовки медицинских сестер по специальности «Сестринская социальная помощь»</h5>
+                    <p>Длительность: 252 академических часа </br>
+                        Форма обучения: очная-заочная</br>
+                        Стоимость: 96 000 руб.</br>
+                        <a href="pp-2.html">Подробнее...</a></p>
+                    <div style="clear: both"></div>
+                    <hr />
+                </div>
+            </section>
+            <section>
+                <a name="doctor"></a>
+                <h3>Врачи</h3>
+                <div>
+                    <!-- PP1 -->
+                    <p><span class="image left"><a href="pp-3.html"><img src="{% static 'images/pic09.jpg' %}" alt="" /></a></span></p>
+                    <h5>Дополнительная программа профессиональной переподготовки врачей по специальности «Неврология»</h5>
+                    <p>Длительность: 576 академических часа </br>
+                        Форма обучения: очная</br>
+                        Стоимость: 240 000 руб.</br>
+                        <a href="pp-3.html">Подробнее...</a></p>
+                    <div style="clear: both"></div>
+                    <hr />
+                    <!-- PP2 -->
+                    <p><span class="image left"><a href="pp-4.html"><img src="{% static 'images/pic09.jpg' %}" alt="" /></a></span></p>
+                    <h5>Дополнительная программа профессиональной переподготовки врачей по специальности «Косметология»</h5>
+                    <p>Длительность: 276 академических часа </br>
+                        Форма обучения: очная-заочная</br>
+                        Стоимость: 240 000 руб.</br>
+                        <a href="pp-4.html">Подробнее...</a></p>
+                    <div style="clear: both"></div>
+                    <hr />
+                </div>
+            </section>
+        </section>
+    </div>
+</section>
+{% endblock %}

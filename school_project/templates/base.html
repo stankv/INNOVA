@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+{% load static %}
+
+<html>
+	<head>
+		<title>{% block title %}Учебный центр "ИННОВА"{% endblock %}</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="{% static 'css/ie/html5shiv.js' %}"></script><![endif]-->
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+		<script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+		<script src="{% static 'js/jquery.scrollgress.min.js' %}"></script>
+		<script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+		<script src="{% static 'js/jquery.slidertron.min.js' %}"></script>
+		<script src="{% static 'js/skel.min.js' %}"></script>
+		<script src="{% static 'js/skel-layers.min.js' %}"></script>
+		<script src="{% static 'js/init.js' %}"></script>
+		<noscript>
+			<link rel="stylesheet" href="{% static 'css/skel.css' %}" />
+			<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+			<link rel="stylesheet" href="{% static 'css/style-xlarge.css' %}" />
+			<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+		</noscript>
+		<!--[if lte IE 9]><link rel="{% static 'stylesheet" href="css/ie/v9.css' %}" /><![endif]-->
+		<!--[if lte IE 8]><link rel="{% static 'stylesheet" href="css/ie/v8.css' %}" /><![endif]-->
+	</head>
+	{% block body %}<body class="landing">{% endblock %}
+
+		<!-- Header -->
+			<header id="header" {% block classheader %}class="alt skel-layers-fixed"{% endblock %}>
+				<h1><a href="{% url 'index' %}"><span>Учебный центр</span> "ИННОВА"</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="{% url 'other' page='about-company' %}">О компании</a></li>
+						<li><a href="{% url 'other' page='about-organization' %}" class="icon fa-angle-down">Сведения об образовательной организации</a>
+							<ul>
+								<li><a href="{% url 'edu' page='about' page2='about-main' %}">Основные сведения </a></li>
+								<li><a href="{% url 'edu' page='about' page2='about-structure' %}">Структура и органы управления образовательной организацией</a></li>
+								<li><a href="{% url 'edu' page='about' page2='about-documents' %}">Документы</a></li>
+								<li><a href="{% url 'edu' page='about' page2='about-education' %}">Образование</a></li>
+								<li><a href="{% url 'edu' page='about' page2='about-management' %}">Руководство. Педагогический (научно-педагогический) состав</a></li>
+								<li><a href="{% url 'edu' page='about' page2='about-equipment' %}">Материально-техническое обеспечение и оснащенность образовательного процесса. Доступная среда</a></li>
+								<li><a href="{% url 'edu' page='about' page2='about-paid-education' %}">Платные образовательные услуги</a></li>
+								<li><a href="{% url 'edu' page='about' page2='about-finance' %}">Финансово-хозяйственная деятельность</a></li>
+								<li><a href="{% url 'edu' page='about' page2='about-places' %}">Вакантные места для приема (перевода) обучающихся</a></li>
+								<li><a href="{% url 'edu' page='about' page2='about-grants' %}">Стипендии и меры поддержки обучающихся </a></li>
+								<li><a href="{% url 'edu' page='about' page2='about-international-cooperation' %}">Международное сотрудничество</a></li>
+								<li><a href="{% url 'edu' page='about' page2='about-catering' %}">Организация питания в образовательной организации</a></li>
+							</ul>							
+						</li>
+						<li>
+							<a href="{% url 'other' page='edu' %}" class="icon fa-angle-down">Обучение</a>
+							<ul>
+								<li>
+									<a href="{% url 'edu' page='edu' page2='edu-retraining' %}">Переподготовка</a>
+									<!--<ul>
+										<li><a href="#">Врачи</a></li>
+										<li><a href="#">Средний медицинский персонал</a></li>
+									</ul> -->
+								</li>
+								<li>
+									<a href="{% url 'edu' page='edu' page2='edu-development' %}">Повышение квалификации</a>
+									<!--<ul>
+										<li><a href="#">Врачи</a></li>
+										<li><a href="#">Средний медицинский персонал</a></li>
+									</ul> -->
+								</li>
+								<li><a href="{% url 'edu' page='edu' page2='edu-additional-education' %}">Дополнительное образование</a></li>
+								<li><a href="{% url 'edu' page='edu' page2='edu-activities' %}">Мероприятия</a></li>
+							</ul>
+						</li>
+						<li><a href="{% url 'other' page='contacts' %}">Контакты</a></li>
+						{% if user.is_authenticated %}
+						<li><a href="{% url 'profile' %}">Личный кабинет</a></li>
+						{% else %}
+						<li><a href="{% url 'login' %}">Вход / Регистрация</a></li>
+						{% endif %}
+					</ul>
+				</nav>
+			</header>
+
+	    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}><h3>{{ message }}</h3></li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+		{% block content %}{% endblock %}
+			
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+					<li><a href="#" class="icon fa-envelope"><span class="label">Envelope</span></a></li>
+				</ul>
+				<ul class="menu">
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">Условия пользования сайтом</a></li>
+					<li><a href="{% url 'other' page='privacy-policy' %}">Конфиденциальность</a></li>
+					<li><a href="{% url 'other' page='contacts' %}">Контакты</a></li>
+				</ul>
+				<span class="copyright">
+					&copy; Copyright. Все права защищены. 2024
+				</span>
+			</footer>
+
+	</body>
+</html>
