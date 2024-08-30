@@ -124,7 +124,8 @@ STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'school_app.AdvUser'
 #LOGOUT_REDIRECT_URL = 'school_app.logout'
 
-EMAIL_PORT = 1025
+#EMAIL_PORT = 1025
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'    # отправка писем в консоль
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
