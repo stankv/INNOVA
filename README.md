@@ -3,10 +3,12 @@
 ### Описание
 
 Главная страница сайта
-![Главная.JPG](..%2Fimg%2F%C3%EB%E0%E2%ED%E0%FF.JPG)
+![Главная](https://github.com/user-attachments/assets/31563b50-b141-4530-89f1-dff35cbff075)
+
 
 Страница входа/регистрации
-![ЛК.JPG](..%2Fimg%2F%CB%CA.JPG)
+![ЛК](https://github.com/user-attachments/assets/9a4e62e1-5dc1-4e29-9b74-9475be840d08)
+
 
 
 ---
